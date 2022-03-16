@@ -51,7 +51,7 @@ const app = new Vue({
         return {
             fullheight: true,
             right: true,
-            models: ["DamagedHelmet"],
+            models: ["Ikea"],
             flavours: ["glTF", "glTF-Binary", "glTF-Quantized", "glTF-Draco", "glTF-pbrSpecularGlossiness"],
             scenes: [{title: "0"}, {title: "1"}],
             cameras: [{title: "User Camera", index: -1}],
@@ -63,7 +63,7 @@ const app = new Vue({
             xmp: [{title: "xmp"}],
             statistics: [],
 
-            selectedModel: "DamagedHelmet",
+            selectedModel: "Ikea",
             selectedFlavour: "",
             selectedScene: {},
             selectedCamera: {},
@@ -110,8 +110,8 @@ const app = new Vue({
     mounted: function()
     {
         // remove input class from color picker (added by default by buefy)
-        const colorPicker = document.getElementById("clearColorPicker");
-        colorPicker.classList.remove("input");
+        // const colorPicker = document.getElementById("clearColorPicker");
+        // colorPicker.classList.remove("input");
 
         // test if webgl is present
         const context = canvas.getContext("webgl2", { alpha: false, antialias: true });
@@ -120,7 +120,7 @@ const app = new Vue({
             "Please try again with another browser, or check https://get.webgl.org/webgl2/ " +
             "if you believe you are seeing this message in error.", 15000);
         }
-
+/*
         // add github logo to navbar
         this.$nextTick(function () {
             // Code that will run only after the
@@ -134,13 +134,13 @@ const app = new Vue({
             document.getElementById("tabsContainer").childNodes[0].childNodes[0].appendChild(a);
             a.appendChild(img);
         })
-
+*/
     },
     methods:
     {
         setAnimationState: function(value)
         {
-            this.$refs.animationState.setState(value);
+            // this.$refs.animationState.setState(value);
         },
         iblTriggered: function(value)
         {
